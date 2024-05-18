@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
     // Запрос размеров матриц и их элементов у пользователя
     println("Введите размеры первой матрицы (число строк и столбцов):")
     val (rows1, cols1) = readLine()!!.split(" ").map { it.toInt() }
