@@ -11,6 +11,10 @@ fun main() {
     val matrix1 = Array(rows1) { DoubleArray(cols1) }
     for (i in 0 ..< rows1) {
         matrix1[i] = readln().split(" ").map { it.toDouble() }.toDoubleArray()
+        if (matrix1[i].size != cols1) {
+            println("Неверное количество чисел в строке")
+            return
+        }
     }
 
     println("Введите размеры второй матрицы (число строк и столбцов):")
@@ -25,6 +29,10 @@ fun main() {
     val matrix2 = Array(rows2) { DoubleArray(cols2) }
     for (i in 0 ..< rows2) {
         matrix2[i] = readln().split(" ").map { it.toDouble() }.toDoubleArray()
+        if (matrix2[i].size != cols2) {
+            println("Неверное количество чисел в строке")
+            return
+        }
     }
 
 
