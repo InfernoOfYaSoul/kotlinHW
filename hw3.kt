@@ -2,6 +2,11 @@ fun main() {
     println("Введите размеры первой матрицы (число строк и столбцов):")
     val (rows1, cols1) = readln().split(" ").map { it.toInt() }
 
+    if (rows1 <= 0 || cols1 <= 0 ) {
+        println("Недействительные значения")
+        return
+    }
+
     println("Введите элементы первой матрицы:")
     val matrix1 = Array(rows1) { DoubleArray(cols1) }
     for (i in 0 ..< rows1) {
@@ -10,6 +15,11 @@ fun main() {
 
     println("Введите размеры второй матрицы (число строк и столбцов):")
     val (rows2, cols2) = readln().split(" ").map { it.toInt() }
+
+    if (rows2 <= 0 || cols2 <= 0 ) {
+        println("Недействительные значения")
+        return
+    }
 
     println("Введите элементы второй матрицы:")
     val matrix2 = Array(rows2) { DoubleArray(cols2) }
