@@ -1,5 +1,4 @@
 fun main() {
-    // Запрос размеров матриц и их элементов у пользователя
     println("Введите размеры первой матрицы (число строк и столбцов):")
     val (rows1, cols1) = readLine()!!.split(" ").map { it.toInt() }
 
@@ -18,7 +17,7 @@ fun main() {
         matrix2[i] = readLine()!!.split(" ").map { it.toDouble() }.toDoubleArray()
     }
 
-    // Проверка входных данных
+    
     if (cols1 != cols2) {
         println("Ошибка: количество столбцов в матрицах не совпадает.")
         return
@@ -28,7 +27,7 @@ fun main() {
         return
     }
 
-    // Вычисление скалярного произведения
+
     var scalarProduct = 0.0
     for (i in 0 until rows1) {
         for (j in 0 until cols1) {
@@ -36,6 +35,6 @@ fun main() {
         }
     }
 
-    // Вывод результата
+
     println("Скалярное произведение: $scalarProduct")
 }
